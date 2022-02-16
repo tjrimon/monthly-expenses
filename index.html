@@ -27,8 +27,57 @@
     </header>
 
     <!-- main section start here  -->
-    <main>
+    <main class="xl:w-[1250px] xl:m-auto">
+        <section>
+            <div class="grid grid-cols-1 md:grid-cols-2 mx-10">
+                <div class="md:mr-5 mb-10 ">
+                    <img class="h-[815px] w-[705px] " src="images/money.jpg" alt="">
+                </div>
+                <div class="bg-[#F8F8F8] md:ml-5 py-12 mb-10 font-['Roboto'] justify-center  text-center flex">
+                    <div>
+                        <h3 class="font-medium text-2xl text-black-500 text-center pb-7">Income</h3>
+                        <div>
+                            <label for="income" class="pr-4 font-normal text-[18px] ml-[-22px]">Income: </label>
+                            <input class="py-2 px-4 bg-[#DCDCDC] rounded focus:outline-none" id="income" type="text">
+                        </div>
+                        <h3 class="font-medium text-2xl text-black-500 text-center py-7">Expenses</h3>
+                        <div>
+                            <label for="food" class="pr-4 font-normal text-[18px]">Food: </label>
+                            <input class="py-2 px-4 mb-5 bg-[#DCDCDC] rounded focus:outline-none" id="food" type="text">
+                        </div>
+                        <div>
+                            <label for="rent" class="pr-4 font-normal text-[18px]">Rent: </label>
+                            <input class="py-2 px-4 mb-5 bg-[#DCDCDC] rounded focus:outline-none" id="rent" type="text">
+                        </div>
+                        <div>
+                            <label for="clothes" class="pr-4 ml-[-22px] font-normal text-[18px]">Clothes: </label>
+                            <input class="py-2 px-4 bg-[#DCDCDC] rounded focus:outline-none" id="clothes" type="text">
+                        </div>
+                        <button
+                            class="font-bold text-white text-lg py-3 px-12 bg-[#59A5FF] mt-6 rounded">Calculate</button>
+                        <h3 class="font-medium text-2xl text-black-500 text-center py-6">Total Expenses: <span
+                                id="total-expenses">5500</span></h3>
+                        <h3 class="font-medium text-2xl text-black-500 text-center ">Balance: <span
+                                id="balance">4500</span>
+                        </h3>
+                        <div>
+                            <label for="save" class="pr-4 ml-[-22px] font-normal text-[18px]">Save: </label>
+                            <input class="py-2 px-4 w-16 bg-[#DCDCDC] rounded focus:outline-none" id="save" type="text">
+                            <Span class="px-2">%</Span>
+                            <button
+                                class="font-bold text-white text-lg py-[7px] px-10 bg-[#59A5FF] mt-6 rounded">Save</button>
+                        </div>
+                        <h3 class="font-medium text-2xl text-black-500 text-center py-6">Saving Amount: <span
+                                id="saving">2000</span>
+                        </h3>
+                        <h3 class="font-medium text-2xl text-black-500 text-center ">Remaining Balance: <span
+                                id="remaining-balance">2500</span>
+                        </h3>
 
+                    </div>
+                </div>
+            </div>
+        </section>
     </main>
 
     <!-- JavaScript Main File Link Here  -->
