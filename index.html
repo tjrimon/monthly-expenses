@@ -22,7 +22,7 @@
     <!-- header section Start here  -->
     <header>
         <div class="flex justify-center font-['Montserrat']">
-            <h2 class="font-bold text-teal-500 text-xl md:text-[48px] py-8">Monthly Expenses</h2>
+            <h2 class="font-bold text-teal-500 text-3xl md:text-[48px] py-8">Monthly Expenses</h2>
         </div>
     </header>
 
@@ -31,57 +31,61 @@
         <section>
             <div class="grid grid-cols-1 md:grid-cols-2 mx-10">
                 <div class="md:mr-5 mb-10 ">
-                    <img class="md:h-[815px] md:w-[705px] " src="images/money.jpg" alt="">
+                    <img class="md:h-[815px] md:w-[705px]" src="images/money.jpg" alt="">
                 </div>
-                <block md:inline-block div
-                    class="bg-[#F8F8F8] md:ml-5 py-12 mb-10 font-['Roboto'] justify-center  text-center flex">
+                <div class="bg-[#F8F8F8] md:ml-5 py-12 mb-10 font-['Roboto'] justify-center text-center flex">
                     <div>
                         <h3 class="font-medium text-2xl text-black-500 text-center pb-7">Income</h3>
                         <div>
                             <label for="income"
-                                class="block md:inline-block pr-4 font-normal text-[18px] md:ml-[-22px]">Income:
-                            </label>
+                                class="block md:inline-block pr-4 font-normal text-[18px] ml-[-22px]">Income: </label>
                             <input class="py-2 px-4 bg-[#DCDCDC] rounded focus:outline-none" id="income" type="text">
+                            <p class=" mt-2 text-sm text-red-600 mb-3 " id="income-error"></p>
                         </div>
                         <h3 class="font-medium text-2xl text-black-500 text-center py-7">Expenses</h3>
+                        <small class="mt-[-30px] text-red-600 mb-7 hidden" id="expenses-error"></small>
                         <div>
                             <label for="food" class="block md:inline-block pr-4 font-normal text-[18px]">Food: </label>
                             <input class="py-2 px-4 mb-5 bg-[#DCDCDC] rounded focus:outline-none" id="food" type="text">
+                            <p class=" mt-[-15px] text-sm text-red-600 mb-3 hidden" id="food-error"></p>
                         </div>
                         <div>
-                            <label for="rent" class="block md:inline-block pr-4 font-normal md:text-[18px]">Rent:
-                            </label>
+                            <label for="rent" class="block md:inline-block pr-4 font-normal text-[18px]">Rent: </label>
                             <input class="py-2 px-4 mb-5 bg-[#DCDCDC] rounded focus:outline-none" id="rent" type="text">
+                            <p class=" mt-[-15px] text-sm text-red-600 mb-3 hidden" id="rent-error"></p>
                         </div>
                         <div>
                             <label for="clothes"
-                                class="block md:inline-block pr-4 ml-[-22px] font-normal md:text-[18px]">Clothes:
-                            </label>
+                                class="block md:inline-block pr-4 ml-[-22px] font-normal text-[18px]">Clothes: </label>
                             <input class="py-2 px-4 bg-[#DCDCDC] rounded focus:outline-none" id="clothes" type="text">
+                            <p class="mt-2 text-sm text-red-600 hidden" id="clothes-error"></p>
                         </div>
-                        <button
-                            class="font-bold text-white text-lg py-3 px-12 bg-[#59A5FF] mt-6 rounded">Calculate</button>
+                        <button class="font-bold text-white text-lg py-3 px-12 bg-[#59A5FF] mt-6 rounded "
+                            id="calculate-btn">Calculate</button>
                         <h3 class="font-medium text-2xl text-black-500 text-center py-6">Total Expenses: <span
-                                id="total-expenses">5500</span></h3>
-                        <h3 class="font-medium text-2xl text-black-500 text-center ">Balance: <span
-                                id="balance">4500</span>
+                                id="total-expenses"></span></h3>
+                        <h3 class="font-medium text-2xl text-black-500 text-center ">Balance: <span id="balance"></span>
                         </h3>
+
                         <div>
                             <label for="save" class="pr-4 ml-[-22px] font-normal text-[18px]">Save: </label>
-                            <input class="py-2 px-4 w-16 bg-[#DCDCDC] rounded focus:outline-none" id="save" type="text">
+                            <input class="py-2 px-4 w-16 bg-[#DCDCDC] rounded focus:outline-none" id="save-input"
+                                type="text">
                             <Span class="px-2">%</Span>
-                            <button
-                                class="font-bold text-white text-lg py-[7px] px-10 bg-[#59A5FF] mt-6 rounded">Save</button>
+                            <button class="font-bold text-white text-lg py-[7px] px-10 bg-[#59A5FF] mt-6 rounded"
+                                id="save-btn">Save</button>
                         </div>
-                        <h3 class="font-medium text-2xl text-black-500 text-center py-6">Saving Amount: <span
-                                id="saving">2000</span>
+                        <p class="mt-2 text-sm mb-0 hidden text-red-600" id="save-input-error"></p>
+                        <p class="mt-5 text-sm mb-[-20px] text-red-600 hidden" id="savings-error"></p>
+                        <h3 class="font-medium text-2xl text-black-500 text-center pb-6 pt-4">Saving Amount: <span
+                                id="saving"></span>
                         </h3>
                         <h3 class="font-medium text-2xl text-black-500 text-center ">Remaining Balance: <span
-                                id="remaining-balance">2500</span>
+                                id="remaining-balance"></span>
                         </h3>
 
                     </div>
-                </block>
+                </div>
             </div>
         </section>
     </main>
